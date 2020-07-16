@@ -1,8 +1,8 @@
-#CLASS 0
-$CLASS = "TOOLS|Alchemy|EXE"
+//RESET_AlchemyEXE#CLASS 0#AL RESET_AlchemyEXE {#CLASS 0
+$CLASS = "Tools|Alchemy|EXE"
 
 #AL AlcheMyStart {
-BOTON Alchemy
+BotOn Alchemy
 #WALK kadfountain
 SysMsg Alchemy STARTED.
 tradeskills focus alchemy
@@ -11,7 +11,6 @@ AlcheMyCondition
 
 #AL AlcheMyCondition {
 #WALK kadfountain
-
 #IF ((%mud.hp<200) OR (%mud.ep<200)) {#T+ AlcheMyBuyMoreBeer
 #T+ AlcheMyBuyMoreWine
 #T- AlcheMyNeedMoreGold
@@ -34,10 +33,10 @@ do get empty bottle,get empty bottle from pack,get bottle from pack,empty bottle
 } $CLASS
 
 #AL AlcheMyStop {
-BOTOFF Alchemy
+BotOff Alchemy
 #UNT Alarm_Alchemy
 #TI OFF
 SysMsg Alchemy STOPPED.
 } $CLASS
 
-#CLASS 0
+#CLASS 0} _Alchemy#CLASS 0

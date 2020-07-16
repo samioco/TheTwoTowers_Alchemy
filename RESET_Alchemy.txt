@@ -1,4 +1,4 @@
-#CLASS 0
-RESET_Alchemy_EXE
-RESET_Alchemy_Settings
-#CLASS 0
+//RESET_Alchemy#CLASS 0#AL RESET_Alchemy {#CLASS 0
+RESET_AlchemyEXE
+RESET_AlchemySettings
+#CLASS 0} _Alchemy#CLASS 0

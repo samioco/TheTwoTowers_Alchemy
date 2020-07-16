@@ -1,5 +1,5 @@
-#CLASS 0
-$CLASS = "TOOLS|Alchemy|Settings"
+//RESET_AlchemySettings#CLASS 0#AL RESET_AlchemySettings {#CLASS 0
+$CLASS = "Tools|Alchemy|Settings"
 
 #VAR Messages_Alchemy {"You use your alchemy skills to brew up a small potion.|You mix the components, but you do so improperly.|You can't quite figure out how to combine your components properly.|something too soon.  You stop before wasting any more components."} {} VAR
 
@@ -10,26 +10,26 @@ SysMsg Next brew in 5s
 #TR AlcheMyBuyMoreBeer {^There is no bottle in the pack to get.} {
 #T- AlcheMyBuyMoreBeer;#T+ AlcheMyNeedMoreGold
 SysMsg Out of bottles!
-Action_Add "AlcheMyCondition"
-Action_Add "#WALK kadfountain;do put all bottle in pack,drop all bottle;Action_Next"
-Action_Add "#WALK kadbar;#50 {do order beer,empty beer,put bottle in pack};Action_Next"
-Action_Next
+ActionAdd "AlcheMyCondition"
+ActionAdd "#WALK kadfountain;do put all bottle in pack,drop all bottle;ActionNext"
+ActionAdd "#WALK kadbar;#50 {do order beer,empty beer,put bottle in pack};ActionNext"
+ActionNext
 } $CLASS
 
 #TR AlcheMyBuyMoreWine {^There is no wine here.} {#T- AlcheMyBuyMoreWine
 #T+ AlcheMyNeedMoreGold
 SysMsg Out of bottles!
-Action_Add "AlcheMyCondition"
-Action_Add "#WALK kadfountain;do put all bottle in pack,drop all bottle;Action_Next"
-Action_Add "#WALK kadbar;#10 {do order wine,put wine in pack};Action_Next"
-Action_Next
+ActionAdd "AlcheMyCondition"
+ActionAdd "#WALK kadfountain;do put all bottle in pack,drop all bottle;ActionNext"
+ActionAdd "#WALK kadbar;#10 {do order wine,put wine in pack};ActionNext"
+ActionNext
 } $CLASS
 
 
-#TR AlcheMyNeedMoreGold {^Treg says: That costs %d gold, which you don't have!} {#T- AlcheMyNeedMoreGold;Action_Add "AlcheMyCondition";gnb;withdraw 200;gold;Action_Next
+#TR AlcheMyNeedMoreGold {^Treg says: That costs %d gold, which you don't have!} {#T- AlcheMyNeedMoreGold;ActionAdd "AlcheMyCondition";gnb;withdraw 200;gold;ActionNext
 } $CLASS
 
 //#TR AlcheMyOrderConfirmed {^Treg says: Thanks for your order!} {#T- AlcheMyNeedMoreGold}
 
 #CLASS $CLASS 0
-#CLASS 0
+#CLASS 0} _Alchemy#CLASS 0
